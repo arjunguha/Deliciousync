@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>DisplayName</key>
+	<string>Deliciousync</string>
+	<key>SyncsWith</key>
+	<dict>
+		<key>syncAlertTypes</key>
+		<array>
+			<string>app</string>
+			<string>device</string>
+			<string>server</string>
+			<string>peer</string>
+		</array>
+	</dict>
+	<key>Entities</key>
+	<dict>
+		<key>com.apple.bookmarks.Folder</key>
+		<array>
+			<string>com.apple.syncservices.RecordEntityName</string>
+			<string>name</string>
+			<string>parent</string>
+		</array>
+		<key>com.apple.bookmarks.Bookmark</key>
+		<array>
+			<string>com.apple.syncservices.RecordEntityName</string>
+			<string>name</string>
+			<string>url</string>
+			<string>parent</string>
+		</array>
+	</dict>
+	<key>Type</key>
+	<string>app</string>
+</dict>
+</plist>

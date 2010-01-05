@@ -1,0 +1,42 @@
+Deliciousync
+Copyright (c) 2010 Arjun Guha.
+All Rights Reserved.
+
+Licensed by the terms of the GNU General Public License 3.0.  See License.txt
+for details.
+
+Deliciousync is a utility that periodically synchronizes Safari's bookmarks
+with bookmarks from a Delicious account.
+
+Uninstallation
+==============
+
+To uninstall, delete:
+
+1. the Deliciousync application bundle,
+2. the folder ~/Library/Application Support/Deliciousync, and
+3. the file ~/Library/LaunchAgents/DeliciousyncAgent.plist.
+
+Details
+=======
+
+The Deliciousync application bundle includes a command-line tool that does the
+actual work of synchronization (DeliciousyncAgent). The GUI is a front-end for
+the agent, which may be used independently.
+
+When opened, Deliciousync copies the agent and associated files to the
+following directory:
+
+~/Library/Application Support/Deliciousync
+
+Deliciousync also creates a launchd configuration file that periodically
+launches the agent:
+
+~/Library/LaunchAgents/DeliciousyncAgent.plist
+
+This lets launchd locate and launch the agent, even if the Deliciousync bundle
+is moved or deleted.
+
+The agent uses Sync Services to synchronize with Safari and the api.del.icio.us HTTP API to synchronize with Delicious.  In the Application Support folder,
+the agent maintains a cache of Safari and Delicious bookmarks.  This cache lets
+the agent sync incrementally.

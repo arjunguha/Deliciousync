@@ -1,0 +1,614 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD58140DA1D0A300B32029 /* MainMenu.xib */; };
+		256AC3DA0F4B6AC300CF3369 /* DeliciousyncAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 256AC3D90F4B6AC300CF3369 /* DeliciousyncAppDelegate.m */; };
+		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
+		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
+		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		DC1D797A10E9AAA9005102C8 /* DeliciousyncAgentClientDescription.plist in Resources */ = {isa = PBXBuildFile; fileRef = DC1D797910E9AAA9005102C8 /* DeliciousyncAgentClientDescription.plist */; };
+		DC1D7B6D10E9E1C5005102C8 /* AgentMain.m in Sources */ = {isa = PBXBuildFile; fileRef = DC1D7B6B10E9E19B005102C8 /* AgentMain.m */; };
+		DC1D7B6E10E9E1E6005102C8 /* SyncServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCDEDBD310E5921100EFD001 /* SyncServices.framework */; };
+		DC1D7B6F10E9E1E6005102C8 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCDEDC5710E5A11600EFD001 /* Security.framework */; };
+		DC1D7B7210E9E20D005102C8 /* DeliciousyncAgent in Resources */ = {isa = PBXBuildFile; fileRef = DC1D7B6110E9E115005102C8 /* DeliciousyncAgent */; };
+		DC1D7B8610E9E258005102C8 /* DeliciousPost.m in Sources */ = {isa = PBXBuildFile; fileRef = DC97402010E6D38B00C894CF /* DeliciousPost.m */; };
+		DC1D7B8710E9E258005102C8 /* DeliciousSync.m in Sources */ = {isa = PBXBuildFile; fileRef = DC97402710E6D3F200C894CF /* DeliciousSync.m */; };
+		DC1D7B8810E9E258005102C8 /* DeliciousConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = DC97402A10E6D3FF00C894CF /* DeliciousConnection.m */; };
+		DC1D7B8910E9E258005102C8 /* FakeDeliciousConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = DC97411510E6F5FD00C894CF /* FakeDeliciousConnection.m */; };
+		DC1D7B8A10E9E258005102C8 /* SafariSync.m in Sources */ = {isa = PBXBuildFile; fileRef = DCDEDBC310E5914100EFD001 /* SafariSync.m */; };
+		DC1D7B8B10E9E258005102C8 /* SafariBookmark.m in Sources */ = {isa = PBXBuildFile; fileRef = DCDEDBC910E5918700EFD001 /* SafariBookmark.m */; };
+		DC1D7B8C10E9E258005102C8 /* SafariFolder.m in Sources */ = {isa = PBXBuildFile; fileRef = DCDEDBCC10E5918F00EFD001 /* SafariFolder.m */; };
+		DC1D7BB410E9ECE2005102C8 /* Sync.m in Sources */ = {isa = PBXBuildFile; fileRef = DC97404510E6D75000C894CF /* Sync.m */; };
+		DC1D7C1310EA0034005102C8 /* Common.m in Sources */ = {isa = PBXBuildFile; fileRef = DC1D7C1210EA0034005102C8 /* Common.m */; };
+		DC1D7C1410EA0034005102C8 /* Common.m in Sources */ = {isa = PBXBuildFile; fileRef = DC1D7C1210EA0034005102C8 /* Common.m */; };
+		DC1D7C8110EA4958005102C8 /* LocalStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = DC1D7C8010EA4958005102C8 /* LocalStorage.m */; };
+		DC1D7E3410EAE884005102C8 /* DeliciousyncAgent.m in Sources */ = {isa = PBXBuildFile; fileRef = DC1D7E3310EAE884005102C8 /* DeliciousyncAgent.m */; };
+		DC62D91310EB4E4900C84C96 /* SafariUpdateRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = DC62D91210EB4E4900C84C96 /* SafariUpdateRecord.m */; };
+		DC8E948B10EBB74400FE910B /* UISettings.m in Sources */ = {isa = PBXBuildFile; fileRef = DC8E948A10EBB74400FE910B /* UISettings.m */; };
+		DC8E952110EC45ED00FE910B /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = DC8E952010EC45ED00FE910B /* LICENSE */; };
+		DC97440710E8EB4400C894CF /* SafariOutlineViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = DC97440610E8EB4400C894CF /* SafariOutlineViewDataSource.m */; };
+		DCD6347710F36BF4005F7285 /* README in Resources */ = {isa = PBXBuildFile; fileRef = DCD6347610F36BF4005F7285 /* README */; };
+		DCDEDC4710E59FFD00EFD001 /* DeliciousyncController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCDEDC4610E59FFD00EFD001 /* DeliciousyncController.m */; };
+		DCDEDC5810E5A11600EFD001 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCDEDC5710E5A11600EFD001 /* Security.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DC62D8E610EB4AB800C84C96 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DC1D7B6010E9E115005102C8;
+			remoteInfo = DeliciousyncAgent;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		1DDD58150DA1D0A300B32029 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		256AC3D80F4B6AC300CF3369 /* DeliciousyncAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeliciousyncAppDelegate.h; sourceTree = "<group>"; };
+		256AC3D90F4B6AC300CF3369 /* DeliciousyncAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeliciousyncAppDelegate.m; sourceTree = "<group>"; };
+		256AC3F00F4B6AF500CF3369 /* Deliciousync_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Deliciousync_Prefix.pch; sourceTree = "<group>"; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		8D1107310486CEB800E47090 /* Deliciousync-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Deliciousync-Info.plist"; sourceTree = "<group>"; };
+		8D1107320486CEB800E47090 /* Deliciousync.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Deliciousync.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC1D797910E9AAA9005102C8 /* DeliciousyncAgentClientDescription.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DeliciousyncAgentClientDescription.plist; sourceTree = "<group>"; };
+		DC1D7B6110E9E115005102C8 /* DeliciousyncAgent */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = DeliciousyncAgent; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC1D7B6B10E9E19B005102C8 /* AgentMain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AgentMain.m; sourceTree = "<group>"; };
+		DC1D7C1110EA0034005102C8 /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
+		DC1D7C1210EA0034005102C8 /* Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Common.m; sourceTree = "<group>"; };
+		DC1D7C7F10EA4958005102C8 /* LocalStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalStorage.h; sourceTree = "<group>"; };
+		DC1D7C8010EA4958005102C8 /* LocalStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalStorage.m; sourceTree = "<group>"; };
+		DC1D7E3210EAE884005102C8 /* DeliciousyncAgent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeliciousyncAgent.h; sourceTree = "<group>"; };
+		DC1D7E3310EAE884005102C8 /* DeliciousyncAgent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeliciousyncAgent.m; sourceTree = "<group>"; };
+		DC62D91110EB4E4900C84C96 /* SafariUpdateRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SafariUpdateRecord.h; sourceTree = "<group>"; };
+		DC62D91210EB4E4900C84C96 /* SafariUpdateRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SafariUpdateRecord.m; sourceTree = "<group>"; };
+		DC8E948910EBB74400FE910B /* UISettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UISettings.h; sourceTree = "<group>"; };
+		DC8E948A10EBB74400FE910B /* UISettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UISettings.m; sourceTree = "<group>"; };
+		DC8E952010EC45ED00FE910B /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		DC97401F10E6D38B00C894CF /* DeliciousPost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeliciousPost.h; sourceTree = "<group>"; };
+		DC97402010E6D38B00C894CF /* DeliciousPost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeliciousPost.m; sourceTree = "<group>"; };
+		DC97402610E6D3F200C894CF /* DeliciousSync.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeliciousSync.h; sourceTree = "<group>"; };
+		DC97402710E6D3F200C894CF /* DeliciousSync.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeliciousSync.m; sourceTree = "<group>"; };
+		DC97402910E6D3FF00C894CF /* DeliciousConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeliciousConnection.h; sourceTree = "<group>"; };
+		DC97402A10E6D3FF00C894CF /* DeliciousConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeliciousConnection.m; sourceTree = "<group>"; };
+		DC97404410E6D75000C894CF /* Sync.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sync.h; sourceTree = "<group>"; };
+		DC97404510E6D75000C894CF /* Sync.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sync.m; sourceTree = "<group>"; };
+		DC97410C10E6F0F200C894CF /* TODO.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = TODO.rtf; sourceTree = "<group>"; };
+		DC97411410E6F5FD00C894CF /* FakeDeliciousConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FakeDeliciousConnection.h; sourceTree = "<group>"; };
+		DC97411510E6F5FD00C894CF /* FakeDeliciousConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FakeDeliciousConnection.m; sourceTree = "<group>"; };
+		DC97440510E8EB4400C894CF /* SafariOutlineViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SafariOutlineViewDataSource.h; sourceTree = "<group>"; };
+		DC97440610E8EB4400C894CF /* SafariOutlineViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SafariOutlineViewDataSource.m; sourceTree = "<group>"; };
+		DCD6347610F36BF4005F7285 /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
+		DCDEDBC210E5914100EFD001 /* SafariSync.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SafariSync.h; sourceTree = "<group>"; };
+		DCDEDBC310E5914100EFD001 /* SafariSync.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SafariSync.m; sourceTree = "<group>"; };
+		DCDEDBC810E5918700EFD001 /* SafariBookmark.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SafariBookmark.h; sourceTree = "<group>"; };
+		DCDEDBC910E5918700EFD001 /* SafariBookmark.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SafariBookmark.m; sourceTree = "<group>"; };
+		DCDEDBCB10E5918F00EFD001 /* SafariFolder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SafariFolder.h; sourceTree = "<group>"; };
+		DCDEDBCC10E5918F00EFD001 /* SafariFolder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SafariFolder.m; sourceTree = "<group>"; };
+		DCDEDBD310E5921100EFD001 /* SyncServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SyncServices.framework; path = System/Library/Frameworks/SyncServices.framework; sourceTree = SDKROOT; };
+		DCDEDC4510E59FFD00EFD001 /* DeliciousyncController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeliciousyncController.h; sourceTree = "<group>"; };
+		DCDEDC4610E59FFD00EFD001 /* DeliciousyncController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeliciousyncController.m; sourceTree = "<group>"; };
+		DCDEDC5710E5A11600EFD001 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D11072E0486CEB800E47090 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
+				DCDEDC5810E5A11600EFD001 /* Security.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC1D7B5F10E9E115005102C8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC1D7B6E10E9E1E6005102C8 /* SyncServices.framework in Frameworks */,
+				DC1D7B6F10E9E1E6005102C8 /* Security.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				DC1D7C1110EA0034005102C8 /* Common.h */,
+				DC1D7C1210EA0034005102C8 /* Common.m */,
+				DC1D7C7F10EA4958005102C8 /* LocalStorage.h */,
+				DC1D7C8010EA4958005102C8 /* LocalStorage.m */,
+				DC97404410E6D75000C894CF /* Sync.h */,
+				DC97404510E6D75000C894CF /* Sync.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
+				DCDEDBD310E5921100EFD001 /* SyncServices.framework */,
+				DCDEDC5710E5A11600EFD001 /* Security.framework */,
+				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7A2FEA54F0111CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D1107320486CEB800E47090 /* Deliciousync.app */,
+				DC1D7B6110E9E115005102C8 /* DeliciousyncAgent */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* Deliciousync */ = {
+			isa = PBXGroup;
+			children = (
+				DC1D7C4D10EA4391005102C8 /* UI Application */,
+				DC1D7B6A10E9E189005102C8 /* Console Agent */,
+				DC97401A10E6D35100C894CF /* Delicious API */,
+				DCDEDBBF10E5912B00EFD001 /* Safari API */,
+				080E96DDFE201D6D7F000001 /* Classes */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+				DC97410C10E6F0F200C894CF /* TODO.rtf */,
+			);
+			name = Deliciousync;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				256AC3F00F4B6AF500CF3369 /* Deliciousync_Prefix.pch */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DCD6347610F36BF4005F7285 /* README */,
+				DC8E952010EC45ED00FE910B /* LICENSE */,
+				8D1107310486CEB800E47090 /* Deliciousync-Info.plist */,
+				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
+				1DDD58140DA1D0A300B32029 /* MainMenu.xib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
+				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DC1D7B6A10E9E189005102C8 /* Console Agent */ = {
+			isa = PBXGroup;
+			children = (
+				DC1D7B6B10E9E19B005102C8 /* AgentMain.m */,
+				DC1D797910E9AAA9005102C8 /* DeliciousyncAgentClientDescription.plist */,
+				DC1D7E3210EAE884005102C8 /* DeliciousyncAgent.h */,
+				DC1D7E3310EAE884005102C8 /* DeliciousyncAgent.m */,
+			);
+			name = "Console Agent";
+			sourceTree = "<group>";
+		};
+		DC1D7C4D10EA4391005102C8 /* UI Application */ = {
+			isa = PBXGroup;
+			children = (
+				DCDEDC4510E59FFD00EFD001 /* DeliciousyncController.h */,
+				DCDEDC4610E59FFD00EFD001 /* DeliciousyncController.m */,
+				256AC3D80F4B6AC300CF3369 /* DeliciousyncAppDelegate.h */,
+				256AC3D90F4B6AC300CF3369 /* DeliciousyncAppDelegate.m */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+				DC8E948910EBB74400FE910B /* UISettings.h */,
+				DC8E948A10EBB74400FE910B /* UISettings.m */,
+			);
+			name = "UI Application";
+			sourceTree = "<group>";
+		};
+		DC97401A10E6D35100C894CF /* Delicious API */ = {
+			isa = PBXGroup;
+			children = (
+				DC97401F10E6D38B00C894CF /* DeliciousPost.h */,
+				DC97402010E6D38B00C894CF /* DeliciousPost.m */,
+				DC97402610E6D3F200C894CF /* DeliciousSync.h */,
+				DC97402710E6D3F200C894CF /* DeliciousSync.m */,
+				DC97402910E6D3FF00C894CF /* DeliciousConnection.h */,
+				DC97402A10E6D3FF00C894CF /* DeliciousConnection.m */,
+				DC97411410E6F5FD00C894CF /* FakeDeliciousConnection.h */,
+				DC97411510E6F5FD00C894CF /* FakeDeliciousConnection.m */,
+			);
+			name = "Delicious API";
+			sourceTree = "<group>";
+		};
+		DCDEDBBF10E5912B00EFD001 /* Safari API */ = {
+			isa = PBXGroup;
+			children = (
+				DCDEDBC210E5914100EFD001 /* SafariSync.h */,
+				DCDEDBC310E5914100EFD001 /* SafariSync.m */,
+				DCDEDBC810E5918700EFD001 /* SafariBookmark.h */,
+				DCDEDBC910E5918700EFD001 /* SafariBookmark.m */,
+				DCDEDBCB10E5918F00EFD001 /* SafariFolder.h */,
+				DCDEDBCC10E5918F00EFD001 /* SafariFolder.m */,
+				DC97440510E8EB4400C894CF /* SafariOutlineViewDataSource.h */,
+				DC97440610E8EB4400C894CF /* SafariOutlineViewDataSource.m */,
+				DC62D91110EB4E4900C84C96 /* SafariUpdateRecord.h */,
+				DC62D91210EB4E4900C84C96 /* SafariUpdateRecord.m */,
+			);
+			name = "Safari API";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8D1107260486CEB800E47090 /* Deliciousync */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "Deliciousync" */;
+			buildPhases = (
+				8D1107290486CEB800E47090 /* Resources */,
+				8D11072C0486CEB800E47090 /* Sources */,
+				8D11072E0486CEB800E47090 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DC62D8E710EB4AB800C84C96 /* PBXTargetDependency */,
+			);
+			name = Deliciousync;
+			productInstallPath = "$(HOME)/Applications";
+			productName = Deliciousync;
+			productReference = 8D1107320486CEB800E47090 /* Deliciousync.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DC1D7B6010E9E115005102C8 /* DeliciousyncAgent */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DC1D7B6610E9E13F005102C8 /* Build configuration list for PBXNativeTarget "DeliciousyncAgent" */;
+			buildPhases = (
+				DC1D7B5E10E9E115005102C8 /* Sources */,
+				DC1D7B5F10E9E115005102C8 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DeliciousyncAgent;
+			productName = DeliciousyncAgent;
+			productReference = DC1D7B6110E9E115005102C8 /* DeliciousyncAgent */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Deliciousync" */;
+			compatibilityVersion = "Xcode 3.1";
+			hasScannedForEncodings = 1;
+			mainGroup = 29B97314FDCFA39411CA2CEA /* Deliciousync */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8D1107260486CEB800E47090 /* Deliciousync */,
+				DC1D7B6010E9E115005102C8 /* DeliciousyncAgent */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D1107290486CEB800E47090 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC1D7B7210E9E20D005102C8 /* DeliciousyncAgent in Resources */,
+				DC1D797A10E9AAA9005102C8 /* DeliciousyncAgentClientDescription.plist in Resources */,
+				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
+				1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */,
+				DC8E952110EC45ED00FE910B /* LICENSE in Resources */,
+				DCD6347710F36BF4005F7285 /* README in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D11072C0486CEB800E47090 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072D0486CEB800E47090 /* main.m in Sources */,
+				256AC3DA0F4B6AC300CF3369 /* DeliciousyncAppDelegate.m in Sources */,
+				DCDEDC4710E59FFD00EFD001 /* DeliciousyncController.m in Sources */,
+				DC97440710E8EB4400C894CF /* SafariOutlineViewDataSource.m in Sources */,
+				DC1D7C1410EA0034005102C8 /* Common.m in Sources */,
+				DC8E948B10EBB74400FE910B /* UISettings.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC1D7B5E10E9E115005102C8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC1D7B6D10E9E1C5005102C8 /* AgentMain.m in Sources */,
+				DC1D7B8610E9E258005102C8 /* DeliciousPost.m in Sources */,
+				DC1D7B8710E9E258005102C8 /* DeliciousSync.m in Sources */,
+				DC1D7B8810E9E258005102C8 /* DeliciousConnection.m in Sources */,
+				DC1D7B8910E9E258005102C8 /* FakeDeliciousConnection.m in Sources */,
+				DC1D7B8A10E9E258005102C8 /* SafariSync.m in Sources */,
+				DC1D7B8B10E9E258005102C8 /* SafariBookmark.m in Sources */,
+				DC1D7B8C10E9E258005102C8 /* SafariFolder.m in Sources */,
+				DC1D7BB410E9ECE2005102C8 /* Sync.m in Sources */,
+				DC1D7C1310EA0034005102C8 /* Common.m in Sources */,
+				DC1D7C8110EA4958005102C8 /* LocalStorage.m in Sources */,
+				DC1D7E3410EAE884005102C8 /* DeliciousyncAgent.m in Sources */,
+				DC62D91310EB4E4900C84C96 /* SafariUpdateRecord.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DC62D8E710EB4AB800C84C96 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DC1D7B6010E9E115005102C8 /* DeliciousyncAgent */;
+			targetProxy = DC62D8E610EB4AB800C84C96 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		089C165CFE840E0CC02AAC07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				089C165DFE840E0CC02AAC07 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		1DDD58140DA1D0A300B32029 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1DDD58150DA1D0A300B32029 /* English */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C01FCF4B08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_ENABLE_OBJC_GC = required;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Deliciousync_Prefix.pch;
+				INFOPLIST_FILE = "Deliciousync-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_NAME = Deliciousync;
+				VALID_ARCHS = x86_64;
+			};
+			name = Debug;
+		};
+		C01FCF4C08A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_OBJC_GC = required;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Deliciousync_Prefix.pch;
+				INFOPLIST_FILE = "Deliciousync-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_NAME = Deliciousync;
+				VALID_ARCHS = x86_64;
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PREBINDING = NO;
+				SDKROOT = macosx10.6;
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = macosx10.6;
+			};
+			name = Release;
+		};
+		DC1D7B6310E9E115005102C8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_ENABLE_OBJC_GC = required;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Deliciousync_Prefix.pch;
+				INSTALL_PATH = /usr/local/bin;
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = DeliciousyncAgent;
+				VALID_ARCHS = x86_64;
+			};
+			name = Debug;
+		};
+		DC1D7B6410E9E115005102C8 /* Local Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_ENABLE_OBJC_GC = required;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Deliciousync_Prefix.pch;
+				INSTALL_PATH = /usr/local/bin;
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = DeliciousyncAgent;
+				VALID_ARCHS = x86_64;
+			};
+			name = "Local Debug";
+		};
+		DC1D7B6510E9E115005102C8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_ENABLE_OBJC_GC = required;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Deliciousync_Prefix.pch;
+				INSTALL_PATH = /usr/local/bin;
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = DeliciousyncAgent;
+				VALID_ARCHS = x86_64;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		DC9741A910E8477300C894CF /* Local Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = LOCAL_DEBUG;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PREBINDING = NO;
+				SDKROOT = macosx10.6;
+			};
+			name = "Local Debug";
+		};
+		DC9741AA10E8477300C894CF /* Local Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_ENABLE_OBJC_GC = required;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Deliciousync_Prefix.pch;
+				INFOPLIST_FILE = "Deliciousync-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_NAME = Deliciousync;
+				VALID_ARCHS = x86_64;
+			};
+			name = "Local Debug";
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "Deliciousync" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4B08A954540054247B /* Debug */,
+				DC9741AA10E8477300C894CF /* Local Debug */,
+				C01FCF4C08A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Deliciousync" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				DC9741A910E8477300C894CF /* Local Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DC1D7B6610E9E13F005102C8 /* Build configuration list for PBXNativeTarget "DeliciousyncAgent" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC1D7B6310E9E115005102C8 /* Debug */,
+				DC1D7B6410E9E115005102C8 /* Local Debug */,
+				DC1D7B6510E9E115005102C8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}
