@@ -143,7 +143,7 @@
     }
   }
   
-  for (NSString *hash in posts) {
+  for (NSString *hash in [posts allKeys]) {
     if ([hashesFromDelicious containsObject:hash] == NO) {
       numRemoved++;
       [posts removeObjectForKey:hash];
@@ -175,7 +175,7 @@
 // updates are complete, removedPosts and modifiedPosts are cleared.
 - (void)pushToDelicious:(NSArray *)removedUrls modified:(NSArray *)modifiedPosts { 
   
-  NSLog(@"%d update(s) and %d delete(s) for Delicious", [removedUrls count], [modifiedPosts count]);
+  NSLog(@"%d update(s) and %d delete(s) for Delicious", [modifiedPosts count], [removedUrls count]);
   
   for (NSString *url in removedUrls) {
     NSLog(@"Removing %@ from Delicious", url);
