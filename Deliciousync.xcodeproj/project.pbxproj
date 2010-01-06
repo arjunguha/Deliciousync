@@ -12,6 +12,7 @@
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		DC14EA9B10F37CDF0076EA01 /* MultiDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = DC14EA9A10F37CDF0076EA01 /* MultiDictionary.m */; };
 		DC1D797A10E9AAA9005102C8 /* DeliciousyncAgentClientDescription.plist in Resources */ = {isa = PBXBuildFile; fileRef = DC1D797910E9AAA9005102C8 /* DeliciousyncAgentClientDescription.plist */; };
 		DC1D7B6D10E9E1C5005102C8 /* AgentMain.m in Sources */ = {isa = PBXBuildFile; fileRef = DC1D7B6B10E9E19B005102C8 /* AgentMain.m */; };
 		DC1D7B6E10E9E1E6005102C8 /* SyncServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCDEDBD310E5921100EFD001 /* SyncServices.framework */; };
@@ -60,6 +61,8 @@
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		8D1107310486CEB800E47090 /* Deliciousync-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Deliciousync-Info.plist"; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* Deliciousync.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Deliciousync.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC14EA9910F37CDF0076EA01 /* MultiDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultiDictionary.h; sourceTree = "<group>"; };
+		DC14EA9A10F37CDF0076EA01 /* MultiDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MultiDictionary.m; sourceTree = "<group>"; };
 		DC1D797910E9AAA9005102C8 /* DeliciousyncAgentClientDescription.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DeliciousyncAgentClientDescription.plist; sourceTree = "<group>"; };
 		DC1D7B6110E9E115005102C8 /* DeliciousyncAgent */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = DeliciousyncAgent; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC1D7B6B10E9E19B005102C8 /* AgentMain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AgentMain.m; sourceTree = "<group>"; };
@@ -82,7 +85,6 @@
 		DC97402A10E6D3FF00C894CF /* DeliciousConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeliciousConnection.m; sourceTree = "<group>"; };
 		DC97404410E6D75000C894CF /* Sync.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sync.h; sourceTree = "<group>"; };
 		DC97404510E6D75000C894CF /* Sync.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sync.m; sourceTree = "<group>"; };
-		DC97410C10E6F0F200C894CF /* TODO.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = TODO.rtf; sourceTree = "<group>"; };
 		DC97411410E6F5FD00C894CF /* FakeDeliciousConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FakeDeliciousConnection.h; sourceTree = "<group>"; };
 		DC97411510E6F5FD00C894CF /* FakeDeliciousConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FakeDeliciousConnection.m; sourceTree = "<group>"; };
 		DC97440510E8EB4400C894CF /* SafariOutlineViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SafariOutlineViewDataSource.h; sourceTree = "<group>"; };
@@ -131,6 +133,8 @@
 				DC1D7C8010EA4958005102C8 /* LocalStorage.m */,
 				DC97404410E6D75000C894CF /* Sync.h */,
 				DC97404510E6D75000C894CF /* Sync.m */,
+				DC14EA9910F37CDF0076EA01 /* MultiDictionary.h */,
+				DC14EA9A10F37CDF0076EA01 /* MultiDictionary.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -175,7 +179,6 @@
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
-				DC97410C10E6F0F200C894CF /* TODO.rtf */,
 			);
 			name = Deliciousync;
 			sourceTree = "<group>";
@@ -369,6 +372,7 @@
 				DC1D7C8110EA4958005102C8 /* LocalStorage.m in Sources */,
 				DC1D7E3410EAE884005102C8 /* DeliciousyncAgent.m in Sources */,
 				DC62D91310EB4E4900C84C96 /* SafariUpdateRecord.m in Sources */,
+				DC14EA9B10F37CDF0076EA01 /* MultiDictionary.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

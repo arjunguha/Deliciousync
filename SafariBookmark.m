@@ -3,16 +3,34 @@
 
 @implementation SafariBookmark
 
-@synthesize uuid, name;
+@synthesize uuid, name, url, parent;
+
+- (id)initWithSyncId:(NSString *)syncId_ name:(NSString *)name_ url:(NSURL *)url_ parent:(NSString *)parent_ {
+  
+  uuid = syncId_;
+  name = name_;
+  url = url_;
+  parent = parent_;
+  return self;
+}
 
 - (id)initFromDictionary:(NSDictionary *)plist {
   
-  url = [NSURL URLWithString:[plist objectForKey:@"url"]];
-  uuid = [plist objectForKey:@"uuid"];
-  name = [plist objectForKey:@"name"];
-  parent = [plist objectForKey:@"parent"];
-  return self;
+  return [self initWithSyncId:[plist objectForKey:@"uuid"]
+                         name:[plist objectForKey:@"name"] 
+                          url:[NSURL URLWithString:[plist objectForKey:@"url"]] 
+                       parent:[plist objectForKey:@"parent"]];
 }
+
+- (id)initFromSyncRecord:(NSDictionary *)record 
+              identifier:(NSString *)identifier {
+  
+  return [self initWithSyncId:identifier
+                         name:[record objectForKey:@"name"] 
+                          url:[record objectForKey:@"url"]
+                       parent:[record objectForKey:@"parent"]];
+}
+
 
 - (NSDictionary *)toDictionary {
   
@@ -24,19 +42,6 @@
           // parent may be nil, so it must go last
           parent, @"parent",
           nil];
-}
-
-- (id)initFromSyncRecord:(NSDictionary *)record 
-              identifier:(NSString *)identifier {
-  
-  uuid = identifier;
-  url = [record objectForKey:@"url"];
-  name = [record objectForKey:@"name"];
-  parent = [record objectForKey:@"parent"];
-  
-  NSLog(@"Received Safari bookmark %@", [url absoluteString]);
-  
-  return self;
 }
 
 - (SafariBookmark *) updateWithSyncRecord:(NSDictionary *)record {

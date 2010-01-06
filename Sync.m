@@ -1,5 +1,6 @@
 #import "Sync.h"
 #import "DeliciousPost.h"
+#import "MultiDictionary.h"
 
 @implementation Sync
 
@@ -30,12 +31,18 @@
   NSMutableSet *remBookmarks = [[NSMutableSet alloc] init];
   NSMutableDictionary *updBookmarks = [[NSMutableDictionary alloc] init];
   
-  NSMutableSet *bookmarkHashes = [[NSMutableSet alloc] init];
+  MultiDictionary *bookmarksByHash = [[MultiDictionary alloc] init];
+  MultiDictionary *namesByHash = [[MultiDictionary alloc] init];
     
   // Scan Safari bookmarks.  Check that all bookmarks have corresponding posts.  Delete if a post does not exist.
-  for (SafariBookmark *bookmark in [safari allBookmarks]) {
+  for (SafariBookmark *bookmark in [safari allBookmarks]) {    
+    
     NSString *urlHash = [DeliciousPost md5:bookmark.href];
-    [bookmarkHashes addObject:urlHash]; // for the next step
+    
+    // for the next step
+    [bookmarksByHash addObject:bookmark forKey:urlHash]; 
+    [namesByHash addObject:bookmark.name forKey:urlHash];
+    
     if ([delicious postByHash:urlHash] == nil) {
       [remBookmarks addObject:bookmark.uuid];
       [safari removeBookmarkBySyncId:bookmark.uuid];
@@ -44,7 +51,10 @@
   
   // Scan Delicious posts.  If a post does not have a corresponding bookmark, create one.
   for (DeliciousPost *post in [delicious allPosts]) {
-    if ([bookmarkHashes containsObject:post.hash] == NO) {      
+    
+    NSSet *relatedNames = [bookmarksByHash objectsForKey:post.hash];
+    
+    if ([relatedNames count] == 0) {
       NSDictionary *syncRecord = [NSDictionary dictionaryWithObjectsAndKeys:
                                   EntityBookmark, ISyncRecordEntityNameKey,
                                   post.description, @"name",
@@ -64,6 +74,20 @@
       [safari addBookmark:bookmark];
       [updBookmarks setValue:syncRecord forKey:syncId];
     }
+    else {
+      if ([relatedNames count] > 1 || [[[relatedNames anyObject] name] isEqualToString:post.description] == NO) {
+        // Rename all related bookmarks
+        for (SafariBookmark *bookmark in [bookmarksByHash objectsForKey:post.hash]) {
+         SafariBookmark *renamedBookmark = [[SafariBookmark alloc] initWithSyncId:bookmark.uuid
+                                                                             name:post.description 
+                                                                              url:bookmark.url
+                                                                           parent:bookmark.parent];
+          
+          [safari addBookmark:renamedBookmark];
+          [updBookmarks setObject:[renamedBookmark toSyncRecord] forKey:bookmark.uuid];
+        }
+      }
+    }
   }
   
   return [[SafariUpdateRecord alloc] initWithBookmarks:updBookmarks
@@ -77,15 +101,16 @@
   NSMutableSet *delBookmarks = [[NSMutableSet alloc] init];
   NSMutableArray *updBookmarks = [NSMutableArray array];
   
-  NSMutableSet *safariHashes = [[NSMutableSet alloc] init];
+  MultiDictionary *namesByUrl = [[MultiDictionary alloc] init];
   
   
-  // Scan Safari bookmarks. If a bookmark does not have a corresponding post, create one. In addition, build a set
-  // containing all URLs in Safari, for the next step.
+  // Scan Safari bookmarks. If a bookmark does not have a corresponding post, create one.
   for (SafariBookmark *bookmark in [safari allBookmarks]) {
     NSString *urlHash = [DeliciousPost md5:bookmark.href];
     
-    [safariHashes addObject:urlHash];
+    [namesByUrl addObject:bookmark.name forKey:bookmark.href]; // to compute renames (later)
+    
+    
     
     if ([delicious postByHash:urlHash] == nil) {
       DeliciousPost *newPost = [[DeliciousPost alloc] initWithUrl:bookmark.href
@@ -95,14 +120,41 @@
       [updBookmarks addObject:newPost];
       [delicious addPost:newPost];
     }
-  } 
-  
-  // Scan Delicious posts. If a post does not have a corresponding URL in Safari, delete it.
+  }
+                                 
   for (DeliciousPost *post in [delicious allPosts]) {
-    if ([safariHashes containsObject:post.hash] == NO) {
+    NSSet *names = [namesByUrl objectsForKey:post.href];
+    int numNames = [names count];
+    
+    if (numNames == 0) {
+      // No corresponding Safari URL, so delete it.
       [delBookmarks addObject:post.href];
       [delicious removePostByHash:post.hash];
     }
+    else {
+      // We just pulled from Safari, so Safari's name is the truth.
+      NSString *name = [names anyObject];
+      if ([post.description isEqualToString:name] == NO || numNames > 1) {
+        
+        if (numNames > 0 && [post.description isEqualToString:name]) {
+          // We picked the old name, make certain we pick a new name.
+          NSMutableSet *newNames = [names mutableCopy];
+          [newNames removeObject:post.description];
+          name = [names anyObject];
+        }
+        
+        DeliciousPost *newPost = [[DeliciousPost alloc] initWithUrl:post.href
+                                                        description:name
+                                                               meta:@""
+                                                               tags:[NSArray array]];
+        [updBookmarks addObject:newPost];
+        [delicious addPost:newPost];
+        if (numNames > 1) {
+          NSLog(@"picking name %@ (of %d names) for %@", name, numNames, post.href);
+        }
+      }
+    }
+          
   }
   
   *removedUrls = [delBookmarks allObjects];
