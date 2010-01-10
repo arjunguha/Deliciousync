@@ -86,21 +86,33 @@
   }
   
   int interval = settings.updateInterval;
-  if (interval == 0) {
-    [intervalSlider setIntValue:11];
+  int sliderVal;
+  switch (interval) {
+    case 0:
+      sliderVal = 4;
+      break;
+    case 60:
+      sliderVal = 0;
+      break;
+    case 600:
+      sliderVal = 1;
+      break;
+    case 1800:
+      sliderVal = 2;
+      break;
+    case 3600:
+      sliderVal = 3;
+      break;
+    default:
+      NSLog(@"interval %d is not recognized by the UI", interval);
+      sliderVal = 1;
+      break;
   }
-  else if (interval >= 60 && interval <= 10 * 60) {
-    [intervalSlider setIntValue: interval / 60];
-  }
-  else {
-    // TODO: set a custom flag
-    [intervalSlider setIntValue:11];
-  }
-    
   
+  [intervalSlider setIntValue:sliderVal];
+      
   [bookmarksOutlineData outlineFromSyncRecords:settings.foldersOutlineData];
-  [folderChooser reloadData];
-  
+  [folderChooser reloadData]; 
 
   
   // Select the destination folder.
@@ -115,8 +127,29 @@
   settings.username = [usernameField stringValue];
   settings.password = [passwordField stringValue];
   settings.destFolder = [[folderChooser itemAtRow:[folderChooser selectedRow]] valueForKey:@"syncId"];
-  int interval = [intervalSlider intValue];
-  settings.updateInterval = interval == 11 ? 0 : interval * 60;
+
+  int sliderVal = [intervalSlider intValue];
+  int interval;
+  
+  switch (sliderVal) {
+    case 0:
+      interval = 60;
+      break;
+    case 1:
+      interval = 10 * 60;
+      break;
+    case 2:
+      interval = 30 * 60;
+      break;
+    case 3:
+      interval = 60 * 60;
+      break;
+    case 4:
+      interval = 0;
+      break;
+  }
+    
+  settings.updateInterval = interval;
 
   return [settings haveSettingsChanged:originalSettings];
 }
