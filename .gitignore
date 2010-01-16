@@ -1,2 +1,4 @@
 /build
 .DS_Store
+Deliciousync.xcodeproj/*.mode1v3
+Deliciousync.xcodeproj/*.pbxuser
