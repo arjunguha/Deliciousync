@@ -1,4 +1,4 @@
-Deliciousync
+# Deliciousync
 Copyright (c) 2010 Arjun Guha.
 All Rights Reserved.
 
@@ -8,19 +8,17 @@ file LICENSE for details.
 Deliciousync is a utility that periodically synchronizes Safari's
 bookmarks with bookmarks from a Delicious account.
 
-Uninstallation
-==============
+## Uninstallation
 
 To uninstall, delete:
 
 1. the Deliciousync application bundle,
-2. the folder ~/Library/Application Support/Deliciousync,
-3. the file ~/Library/LaunchAgents/DeliciousyncAgent.plist, and
+2. the folder `~/Library/Application Support/Deliciousync`,
+3. the file `~/Library/LaunchAgents/DeliciousyncAgent.plist`, and
 4. the application password for Deliciousync (launch the Keychain Access 
    utility).
 
-System Architecture
-===================
+## System Architecture
 
 The Deliciousync application bundle uses a command-line tool,
 DeliciousyncAgent that does the actual work of synchronization. The GUI
@@ -29,12 +27,12 @@ is a front-end to configure the agent, which may be used independently.
 When opened, Deliciousync copies the agent and configuration files to
 the following directory:
 
-~/Library/Application Support/Deliciousync
+    ~/Library/Application Support/Deliciousync
 
 Deliciousync also creates a launchd configuration file that periodically
 launches the agent:
 
-~/Library/LaunchAgents/DeliciousyncAgent.plist
+    ~/Library/LaunchAgents/DeliciousyncAgent.plist
 
 Hence, launchd can locate and launch the agent, even if the Deliciousync
 bundle is moved.
@@ -44,8 +42,7 @@ api.del.icio.us HTTP API to synchronize with Delicious.  In the
 Application Support folder, the agent maintains a cache of Safari and
 Delicious bookmarks. This cache lets the agent sync incrementally.
 
-Synchronization Model
-=====================
+## Synchronization Model
 
 For the moment, Deliciousync does not synchronize folders and
 tags. However, Deliciousync lets the user select a destination folder in
@@ -68,7 +65,6 @@ further updates, assuming no further updates are made.  For example:
 
 1. If a bookmark is deleted or renamed in Delicious, all its associated
    bookmarks are deleted or renamed in Safari.
-
 2. If a bookmark is deleted in Safari and there are no other Safari bookmarks
    with the same URL, then the bookmark is deleted from Delicious.
 
